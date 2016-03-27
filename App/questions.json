@@ -1,0 +1,103 @@
+{
+  "questions": {
+      "0":  {
+        "question": "Quick sort has a best case runtime of O(n)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "Quicksort can run in O(n) in a best case scenario using three-way partition.",
+        "tags": ["sort", "runtime", "truefalse"]
+      },
+      "1":  {
+        "question": "Insert for Hashtables is generally constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "A good hash function will have minimal collisions, thus O(1).",
+        "tags": ["Hash Table", "runtime", "truefalse"]
+      },
+      "2": {
+        "question": "Delete for Hashtables is constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "A good hash function will have minimal collisions, thus O(1).",
+        "tags": ["Hash Table", "runtime", "truefalse"]
+      },
+      "3": {
+        "question": "Which data structures has average insert runtime of O(1)?",
+        "choices": ["binary tree", "heap", "hashtable", "linked list"],
+        "answer": "hashtable",
+        "explaination": "Binary Tree, heap average insert is O(logn). LinkedList is O(n)",
+        "tags": ["runtime", "multiplechoice"]
+      },
+      "4": {
+        "question": "Insert in the middle for LinkedList is constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explaination": "Insert for LinkedList is O(n)",
+        "tags": ["linkedlist", "runtime", "truefalse"]
+      },
+      "5": {
+        "question": "Insert in the beginning/end for LinkedList is constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "Inserting is constant for begninning and ending elements",
+        "tags": ["linkedlist", "runtime", "truefalse"]
+      },
+      "6": {
+        "question": "Insert for Binary Tree is generally O(1)",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explaination": "Insert for Binary Tree is O(log n)",
+        "tags": ["binarytree", "runtime", "truefalse"]
+      },
+      "7": {
+        "question": "Delete for Binary Tree is generally O(log n)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "Insert for Binary Tree is O(log n)",
+        "tags": ["binarytree", "runtime", "truefalse"]
+      },
+      "8": {
+        "question": "In a Min Heap, the keys of the parent is always smaller than its children",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "This is a property of a min heap. Parent is always smaller than its children.",
+        "tags": ["heap", "properties", "truefalse"]
+      },
+      "9": {
+        "question": "In a Min Heap, the find-max operation is constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explaination": "In Max heap, this is True, not in min heap.",
+        "tags": ["minheap", "runtime", "truefalse"]
+      },
+      "10": {
+        "question": "In a Min Heap, the find-min operation is constant O(1)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "In min heap this is true, not in max heap.",
+        "tags": ["binarytree", "runtime", "truefalse"]
+      },
+      "11": {
+        "question": "Merge Sort worst case is O(n^2)",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explaination": "Merge sort worst case is O(nlogn).",
+        "tags": ["sort", "runtime", "truefalse"]
+      },
+      "12": {
+        "question": "Merge Sort worst case is O(n log n)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "Merge sort worst case is O(nlogn).",
+        "tags": ["sort", "runtime", "truefalse"]
+      },
+      "13": {
+        "question": "Hashtable worst time insert is O(n)",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explaination": "A bad hash function will lead to the same hash, thus O(n).",
+        "tags": ["Hash Table", "runtime", "truefalse"]
+      },
+  },
+  "tagTypes": ["Hash Table", "runtime", "truefalse", "multiplechoice"]
+}

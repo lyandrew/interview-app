@@ -8,8 +8,11 @@ import React, {
   View
 } from 'react-native';
 
-import HomeScreen from './App/Component/HomeScreen';
 import ConfigScreen from './App/Component/ConfigScreen';
+import QuestionScreen from './App/Component/QuestionScreen';
+import ConfirmScreen from './App/Component/ConfirmScreen';
+import ResultScreen from './App/Component/ResultScreen';
+
 var _navigator;
 React.BackAndroid.addEventListener('hardwareBackPress', () => {
     if (_navigator && _navigator.getCurrentRoutes().length > 1) {
@@ -36,17 +39,28 @@ var NavigationBarRouteMapper = {
     }
   },
   RightButton: function(route, navigator, index, navState) {
-    return null;
+    switch (route.name) {
+      case 'question':
+        return (
+          <View style={styles.navBarRightButton}>
+            <Text style={styles.navBarButtonText}>{route.index}</Text>
+          </View>
+        );
+      default:
+        return null;
+    }
   },
 
   Title: function(route, navigator, index, navState) {
-    return (
-      <TouchableOpacity>
+
+    switch (route.name) {
+      default:
+      return (
         <View style={styles.navBarRightButton}>
-          <Text style={styles.navBarButtonText}>{'Home'}</Text>
+          <Text style={styles.navBarButtonText}>{route.topic}</Text>
         </View>
-      </TouchableOpacity>
-    );
+      );
+    }
   }
 };
 
@@ -55,14 +69,11 @@ class SoftwareInterview extends Component {
     super(props)
     this.state = {
       topic: '',
-      numQuestion: 0
+      numQuestion: 0,
+      questionsIndices: [],
+      index: 0,
+      score: 0,
     }
-  }
-  updateTopic(topic) {
-    this.setState({topic:topic})
-  }
-  updateQuestions(number){
-    this.setState({numQuestion:number})
   }
 
   renderScene (route, navigator) {
@@ -79,7 +90,7 @@ class SoftwareInterview extends Component {
             navigator={navigator}
             properties={properties}
             onSelection={ (selection) => {
-              this.updateTopic(selection)
+              this.setState({topic:selection})
               navigator.push({
                 name: 'config'
               })
@@ -90,34 +101,80 @@ class SoftwareInterview extends Component {
         var properties = {
           text: this.state.topic,
           direction: 'Select number of questions',
-          choices: ['10', '20', '30']
+          choices: ['5', '10', '20']
         }
         return (
           <ConfigScreen
             navigator={navigator}
             properties={properties}
             onSelection={ (selection) => {
-              this.updateQuestions(selection)
+              this.setState({numQuestion:selection})
               navigator.push({
-                name: 'begin'
+                name: 'confirm',
+                topic: this.state.topic
               })
             }}
             />
         );
-      case 'begin':
+      case 'confirm':
+        var properties = {
+          state: this.state,
+          index: 0
+        }
         return (
-          <View>
-          <Text style={styles.welcome}>
-            Software Engineer Data Structures and Algorithm Practice Questions!
-          </Text>
-          <Text style={styles.welcome}>
-            {this.state.topic}
-          </Text>
-          <Text style={styles.welcome}>
-            {this.state.numQuestion}
-          </Text>
-        </View>
+          <ConfirmScreen
+            navigator={navigator}
+            properties={properties}
+            onConfirm= { (questionsIndicesReturn) => {
+              this.setState({questionsIndices:questionsIndicesReturn})
+              this.setState({index:0})
+              this.setState({score:0})
+              navigator.push({
+                name: 'question',
+                topic: this.state.topic,
+                index: this.state.index+1
+              })
+            }
+
+            }
+            />
         );
+      case 'question':
+        return(
+          <QuestionScreen
+            navigator={navigator}
+            state={this.state}
+            onAnswer={ (score, index) => {
+              var newScore = this.state.score + score;
+              this.setState({score:newScore})
+              var newIndex = index +1;
+              this.setState({index:newIndex})
+            }}
+            onConfirm= { () => {
+              console.log('numQuestio', parseInt(this.state.numQuestion))
+              if (this.state.index !== parseInt(this.state.numQuestion)) {
+                navigator.push({
+                  name: 'question',
+                  topic: this.state.topic,
+                  index: this.state.index+1
+                })
+              } else {
+                navigator.push({
+                  name: 'result',
+                  topic: this.state.topic
+                })
+              }
+            }}
+            />
+        );
+      case 'result':
+        return (
+          <ResultScreen
+            score={this.state.score}
+            onConfirm= { () => {
+              navigator.popToTop()
+            }} />
+          );
     }
   }
   render() {

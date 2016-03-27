@@ -2,35 +2,24 @@ import React, {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
   TouchableHighlight
 } from 'react-native';
 
-export default class ConfigScreen extends React.Component {
+export default class ResultScreen extends React.Component {
   constructor (props) {
     super(props)
-    this.choices = this.props.properties.choices;
   }
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          {this.props.properties.text}
-        </Text>
-        {this.choices.map((choice) => {
-          return (
-            <TouchableHighlight key={choice} onPress={() => this.props.onSelection(choice)}>
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>{choice}</Text>
-              </View>
-            </TouchableHighlight>
-          );
-        })}
-        <Text style={styles.instructions}>
-          {this.props.properties.direction}
-        </Text>
+        <Text style={styles.text}>Score: {this.props.score}</Text>
+        <TouchableHighlight onPress={() => {this.props.onConfirm()}}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Return Home</Text>
+          </View>
+        </TouchableHighlight>
       </View>
-    );
+    )
   }
 }
 
@@ -43,10 +32,11 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     marginTop: 56
   },
-  welcome: {
+  text: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    fontWeight: '500',
   },
   buttonText: {
     alignSelf: 'center',
