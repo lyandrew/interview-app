@@ -2,9 +2,10 @@ import React, {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   TouchableHighlight
 } from 'react-native';
-
+import Dimensions from 'Dimensions';
 var jsonfile = require('../questions.json');
 import Answer from './Answer.js';
 /**
@@ -30,7 +31,7 @@ export default class QuestionScreen extends React.Component {
     this.questionText = jsonfile.questions[this.questionIndex].question;
     this.answerChoices = jsonfile.questions[this.questionIndex].choices;
     this.answer = jsonfile.questions[this.questionIndex].answer;
-    this.explaination = jsonfile.questions[this.questionIndex].explaination;
+    this.explanation = jsonfile.questions[this.questionIndex].explanation;
     this.state.selected = false
     this.state.result = ""
   }
@@ -44,35 +45,41 @@ export default class QuestionScreen extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>{this.questionText}</Text>
-        {this.answerChoices.map((choice) => {
-          return (
-            <TouchableHighlight key={choice}
-              onPress={() => {
-                if(this.state.selected == false) {
-                  this.displayResult(choice);
-                  this.setState({selected:true});
-                  if (this.answer == choice){
-                    this.props.onAnswer(1, this.index);
-                  } else {
-                    this.props.onAnswer(0, this.index);
-                  }
-                }}}>
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>{choice}</Text>
-              </View>
-            </TouchableHighlight>
-          );
-        })}
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'flex-end'}}>
-        <Answer
-          result={this.state.result}
-          explaination={this.explaination}
-          onConfirm={this.props.onConfirm}
-           />
-        </View>
+        <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
+          <View style={{alignItems: 'center', alignSelf: 'stretch',}}>
+          <Text style={styles.text}>{this.questionText}</Text>
 
+          {this.answerChoices.map((choice) => {
+            return (
+              <TouchableHighlight key={choice}
+                onPress={() => {
+                  if(this.state.selected == false) {
+                    this.displayResult(choice);
+                    this.setState({selected:true});
+                    if (this.answer == choice){
+                      this.props.onAnswer(1, this.index);
+                    } else {
+                      this.props.onAnswer(0, this.index);
+                    }
+                  }}}>
+                <View style={styles.button}>
+                  <Text style={styles.buttonText}>{choice}</Text>
+                </View>
+              </TouchableHighlight>
+            );
+          })}
+          </View>
+          <View style={{alignSelf: 'stretch'}}>
+            <Answer
+              result={this.state.result}
+              explanation={this.explanation}
+              onConfirm={this.props.onConfirm}
+
+               />
+          </View>
+        </ScrollView>
       </View>
+
     );
   }
 }
@@ -80,11 +87,15 @@ export default class QuestionScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    marginTop: 56,
+    flexDirection: 'column',
+    backgroundColor: '#e0e0eb',
+  },
+  scroll: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#e0e0eb',
-    alignSelf: 'stretch',
-    marginTop: 56
   },
   text: {
     fontSize: 20,

@@ -15,7 +15,7 @@ export default class QuestionScreen extends React.Component {
     if (this.props.result == "Correct"){
       return (
         <View style={styles.container}>
-          <Text style={styles.text}>Correct: {this.props.explaination}</Text>
+          <Text style={styles.rightText}>Correct: {this.props.explanation}</Text>
           <TouchableHighlight onPress={() => {this.props.onConfirm()}}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Continue</Text>
@@ -26,7 +26,7 @@ export default class QuestionScreen extends React.Component {
     } else if (this.props.result == "Incorrect") {
       return (
         <View style={styles.container}>
-          <Text style={styles.text}>Incorrect: {this.props.explaination}</Text>
+          <Text style={styles.wrongText}>Incorrect: {this.props.explanation}</Text>
           <TouchableHighlight onPress={() => {this.props.onConfirm()}}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Continue</Text>
@@ -45,15 +45,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#e0e0eb',
     alignSelf: 'stretch',
-    marginTop: 56
   },
-  text: {
+  rightText: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
     fontWeight: '500',
+    color: 'green'
+  },
+  wrongText: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    fontWeight: '500',
+    color: 'red'
   },
   buttonText: {
     alignSelf: 'center',
@@ -62,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   button: {
-    backgroundColor: '#29293d',
+    backgroundColor: 'green',
     height: 44,
     width: 200,
     flexDirection: 'row',

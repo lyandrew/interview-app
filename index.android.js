@@ -43,7 +43,7 @@ var NavigationBarRouteMapper = {
       case 'question':
         return (
           <View style={styles.navBarRightButton}>
-            <Text style={styles.navBarButtonText}>{route.index}</Text>
+            <Text style={styles.navBarButtonText}>Q{route.index}</Text>
           </View>
         );
       default:
@@ -83,7 +83,7 @@ class SoftwareInterview extends Component {
         var properties = {
           text: 'Software Engineer Data Structures and Algorithm Practice Questions!',
           direction: 'Select a topic to begin!',
-          choices: ['Hash Table', 'Random']
+          choices: ['Graphs', 'Tree', 'Random']
         }
         return (
           <ConfigScreen
@@ -101,7 +101,7 @@ class SoftwareInterview extends Component {
         var properties = {
           text: this.state.topic,
           direction: 'Select number of questions',
-          choices: ['5', '10', '20']
+          choices: ['5', '10', '15']
         }
         return (
           <ConfigScreen

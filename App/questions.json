@@ -4,99 +4,715 @@
         "question": "Quick sort has a best case runtime of O(n)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "Quicksort can run in O(n) in a best case scenario using three-way partition.",
+        "explanation": "Quicksort can run in O(n) in a best case scenario using three-way partition.",
         "tags": ["sort", "runtime", "truefalse"]
       },
       "1":  {
-        "question": "Insert for Hashtables is generally constant O(1)",
+        "question": "Insert for Hash Tables is generally constant O(1)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "A good hash function will have minimal collisions, thus O(1).",
+        "explanation": "A good hash function will have minimal collisions, thus O(1).",
         "tags": ["Hash Table", "runtime", "truefalse"]
       },
       "2": {
-        "question": "Delete for Hashtables is constant O(1)",
+        "question": "Delete for Hash Tables is constant O(1)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "A good hash function will have minimal collisions, thus O(1).",
+        "explanation": "A good hash function will have minimal collisions, thus O(1).",
         "tags": ["Hash Table", "runtime", "truefalse"]
       },
       "3": {
         "question": "Which data structures has average insert runtime of O(1)?",
-        "choices": ["binary tree", "heap", "hashtable", "linked list"],
-        "answer": "hashtable",
-        "explaination": "Binary Tree, heap average insert is O(logn). LinkedList is O(n)",
+        "choices": ["Binary Tree", "Heap", "Hash Table", "Linked List"],
+        "answer": "Hash Table",
+        "explanation": "Binary Tree, heap average insert is O(logn). LinkedList is O(n)",
         "tags": ["runtime", "multiplechoice"]
       },
       "4": {
         "question": "Insert in the middle for LinkedList is constant O(1)",
         "choices": ["True", "False"],
         "answer": "False",
-        "explaination": "Insert for LinkedList is O(n)",
+        "explanation": "Insert for LinkedList is O(n)",
         "tags": ["linkedlist", "runtime", "truefalse"]
       },
       "5": {
         "question": "Insert in the beginning/end for LinkedList is constant O(1)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "Inserting is constant for begninning and ending elements",
+        "explanation": "Inserting is constant for begninning and ending elements",
         "tags": ["linkedlist", "runtime", "truefalse"]
       },
       "6": {
         "question": "Insert for Binary Tree is generally O(1)",
         "choices": ["True", "False"],
         "answer": "False",
-        "explaination": "Insert for Binary Tree is O(log n)",
-        "tags": ["binarytree", "runtime", "truefalse"]
+        "explanation": "Insert for Binary Tree is O(log n)",
+        "tags": ["Tree", "runtime", "truefalse"]
       },
       "7": {
         "question": "Delete for Binary Tree is generally O(log n)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "Insert for Binary Tree is O(log n)",
-        "tags": ["binarytree", "runtime", "truefalse"]
+        "explanation": "Insert for Binary Tree is O(log n)",
+        "tags": ["Tree", "runtime", "truefalse"]
       },
       "8": {
         "question": "In a Min Heap, the keys of the parent is always smaller than its children",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "This is a property of a min heap. Parent is always smaller than its children.",
+        "explanation": "This is a property of a min heap. Parent is always smaller than its children.",
         "tags": ["heap", "properties", "truefalse"]
       },
       "9": {
         "question": "In a Min Heap, the find-max operation is constant O(1)",
         "choices": ["True", "False"],
         "answer": "False",
-        "explaination": "In Max heap, this is True, not in min heap.",
+        "explanation": "In Max heap, this is True, not in min heap.",
         "tags": ["minheap", "runtime", "truefalse"]
       },
       "10": {
         "question": "In a Min Heap, the find-min operation is constant O(1)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "In min heap this is true, not in max heap.",
-        "tags": ["binarytree", "runtime", "truefalse"]
+        "explanation": "In min heap this is true, not in max heap.",
+        "tags": ["Tree", "runtime", "truefalse"]
       },
       "11": {
         "question": "Merge Sort worst case is O(n^2)",
         "choices": ["True", "False"],
         "answer": "False",
-        "explaination": "Merge sort worst case is O(nlogn).",
+        "explanation": "Merge sort worst case is O(nlogn).",
         "tags": ["sort", "runtime", "truefalse"]
       },
       "12": {
         "question": "Merge Sort worst case is O(n log n)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "Merge sort worst case is O(nlogn).",
+        "explanation": "Merge sort worst case is O(nlogn).",
         "tags": ["sort", "runtime", "truefalse"]
       },
       "13": {
-        "question": "Hashtable worst time insert is O(n)",
+        "question": "Hash Table worst time insert is O(n)",
         "choices": ["True", "False"],
         "answer": "True",
-        "explaination": "A bad hash function will lead to the same hash, thus O(n).",
+        "explanation": "A bad hash function will lead to the same hash, thus O(n).",
         "tags": ["Hash Table", "runtime", "truefalse"]
+      },
+      "14": {
+        "question": "The height of any binary search tree with n nodes is O(log n)",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "In the best case (balanced), it is log n, but if it is a vertical tree, then it is n.",
+        "tags": ["Tree", "runtime", "truefalse"]
+      },
+      "14": {
+        "question": "The depths of any two leaves in a max heap differ by at most 1",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "New levels of heaps are only added once the leaf level is full. As a result, a heap’s leaves are only found in the bottom two levels of the heap and thus the maximum difference between any two leaves’ depths is 1.",
+        "tags": ["heaps", "runtime", "truefalse"]
+      },
+      "15": {
+        "question": "In order traversal of binary search tree will produce:",
+        "choices": ["Sorted List", "Unsorted List", "Reverse of Input", "None of the Above"],
+        "answer": "Sorted List",
+        "explanation": "Binary Search Tree will produce a sorted list during an in order traversal.",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "16": {
+        "question": "A circular linked list can be used for:",
+        "choices": ["Stack", "Queue", "Stack and Queue", "None of the Above"],
+        "answer": "Stack and Queue",
+        "explanation": "Both stack and queue can be represented by circular linked-list.",
+        "tags": ["Tree", "Stack", "multiplechoice"]
+      },
+      "17": {
+        "question": "Minimum number of queues required for priority queue implementation:",
+        "choices": ["0", "1", "2", "3"],
+        "answer": "2",
+        "explanation": "2: one for storing the priority and another for the actual data",
+        "tags": ["Priority Queue", "multiplechoice"]
+      },
+      "18": {
+        "question": "Which of the following algorithm is not stable:",
+        "choices": ["Bubble Sort", "Quick Sort", "Merge Sort", "Heap Sort"],
+        "answer": "Quick Sort",
+        "explanation": "Quick sort is not stable that is it may re-arrange the already sorted items",
+        "tags": ["sort", "multiplechoice"]
+      },
+      "19": {
+        "question": "If queue is implemented using arrays, what would be the worst run time complexity of queue and dequeue operations?",
+        "choices": ["O(n) O(n)", "O(1) O(1)", "O(n) O(1)", "O(1) O(n)"],
+        "answer": "O(1) O(1)",
+        "explanation": "As queue is maintained by two separate pointers for queue and dequeue operations, the run time for both is Ο(1)",
+        "tags": ["Queue", "multiplechoice"]
+      },
+      "20": {
+        "question": "The following sorting algorithms maintain two sub-lists, one sorted and one to be sorted",
+        "choices": ["Selection Sort", "Merge Sort", "Insertion Sort", "Selection and Insertion Sort"],
+        "answer": "Selection and Insertion Sort",
+        "explanation": "Both selection sort and insertion sort maintains two sublists and then checks unsorted list for next sorted element",
+        "tags": ["sort", "multiplechoice"]
+      },
+      "21": {
+        "question": "Which of the following data structures are indexed structures?",
+        "choices": ["Linked List", "Array", "None"],
+        "answer": "Array",
+        "explanation": "Properties of array is indexing",
+        "tags": ["Linked List", "Array", "multiplechoice"]
+      },
+      "22": {
+        "question": "Arrays are best data structures for",
+        "choices": ["Knowing the relative size of the data", "Unknown size of data"],
+        "answer": "Knowing the relative size of the data",
+        "explanation": "Array make use of indexing, resizing an array can take a lot of time.",
+        "tags": ["Linked List", "Array", "multiplechoice"]
+      },
+      "23": {
+        "question": "Linked List are best data structures for",
+        "choices": ["Knowing the relative size of the data", "Unknown size of data"],
+        "answer": "Unknown size of data",
+        "explanation": "LinkedList does not have a set size limit. If the size of data is known, its best to use an array for indexing.",
+        "tags": ["Linked List", "Array", "multiplechoice"]
+      },
+      "24": {
+        "question": "A stack store elements in a First-In-First-Out method",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "Definition of a stack is First-In-Last-Out (FILO)",
+        "tags": ["Stack", "Queue", "truefalse"]
+      },
+      "25": {
+        "question": "A queue store elements in a First-In-First-Out method",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Definition of a queue is First-In-First-Out (FIFO)",
+        "tags": ["Stack", "Queue", "truefalse"]
+      },
+      "26": {
+        "question": "Which of the following statements about binary trees is NOT true?",
+        "choices": ["Every binary tree has at least one node", "Every non-empty tree has exactly one root node", "Every node has at most two children", "Every non-root node has exactly one parent"],
+        "answer": "Every binary tree has at least one node",
+        "explanation": "Properties of binary tree. The tree can be an empty tree.",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "27": {
+        "question": "Which data structure allows deleting data elements from front and inserting at rear?",
+        "choices": ["Binary Search Tree", "Stack", "Queue", "Heap"],
+        "answer": "Queue",
+        "explanation": "Given the data structures above, only the queue allow insertion at the rear.",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "28": {
+        "question": "Given a hash table T with 25 slots that stores 100 elements, the load factor α for T is",
+        "choices": ["4", "40", "2", "20"],
+        "answer": "4",
+        "explanation": "load factor = (no. of elements) / (no. of table slots) = 100/25 = 4",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "29": {
+        "question": "Depth First Search is implemented using a queue",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "DFS is implemented using a stack",
+        "tags": ["search", "truefalse"]
+      },
+      "30": {
+        "question": "Breadth First Search is implemented using a queue",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "BFS is implemented using a queue",
+        "tags": ["search", "truefalse"]
+      },
+      "31": {
+        "question": "In a preorder traversal, the root node is visited first.",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Preorder traversal visit the parent before the child(ren).",
+        "tags": ["Tree", "truefalse"]
+      },
+      "32": {
+        "question": "In a postorder traversal, the root node is visited first.",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "Postorder traversal visit the child(ren) before the parent.",
+        "tags": ["Tree", "truefalse"]
+      },
+      "33": {
+        "question": "In a Binary Search Tree, the left and right sub trees of a node are also binary search trees",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "The children of any BST is also a BST",
+        "tags": ["Tree", "truefalse"]
+      },
+      "34": {
+        "question": "In Binary Search Trees, the keys of all elements are not unique.",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "Keys must be unique for BST",
+        "tags": ["Tree", "truefalse"]
+      },
+      "35": {
+        "question": "In Binary Trees, the keys of all elements are not unique.",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Binary Tree are different than Binary Search Tree, thus keys do not need to be unique.",
+        "tags": ["Tree", "truefalse"]
+      },
+      "36": {
+        "question": "Acyclic graphs do not have cycles.",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Definition of acyclic.",
+        "tags": ["Graphs", "truefalse"]
+      },
+      "37": {
+        "question": "What operation is used by a stack to insert an object onto the top of the stack?",
+        "choices": ["Push", "Pop", "Peak", "Empty"],
+        "answer": "Push",
+        "explanation": "Push is equivalent to insert for a stack.",
+        "tags": ["Stack", "multiplechoice"]
+      },
+      "38": {
+        "question": "What operation is used by a stack to remove the top object from the stack?",
+        "choices": ["Push", "Pop", "Peak", "Empty"],
+        "answer": "Pop",
+        "explanation": "Pop is equivalent to delete for a stack.",
+        "tags": ["Stack", "multiplechoice"]
+      },
+      "39": {
+        "question": "What operation is used by a stack to see the top object from the stack without removing it?",
+        "choices": ["Push", "Pop", "Peak", "Empty"],
+        "answer": "Peak",
+        "explanation": "Peak or Top looks at the first element",
+        "tags": ["Stack", "multiplechoice"]
+      },
+      "40": {
+        "question": "A linked list is which type of data structure?",
+        "choices": ["Linear", "Non Linear", "Hierarchical", "None"],
+        "answer": "Linear",
+        "explanation": "Properties of a linked list",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "41": {
+        "question": "In Single Linked List a node contain minimum how many fields(assuming one for data).",
+        "choices": ["2", "3", "4", "None"],
+        "answer": "2",
+        "explanation": "Next pointer and data are 2 fields",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "42": {
+        "question": "In Doubly Linked List a node contain minimum how many fields(assuming one for data).",
+        "choices": ["2", "3", "4", "None"],
+        "answer": "3",
+        "explanation": "Next pointer, Previous pointer, and data are the 3 fields",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "43": {
+        "question": "Implementation of priority queue can be made from: 1) Tree, 2) Linked List, 3) Doubly Linked List",
+        "choices": ["1 and 2", "2 and 3", "1 and 3", "All"],
+        "answer": "2 and 3",
+        "explanation": "Cannot make a priority queue from a Tree",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "44": {
+        "question": "Linked lists, at any point in the list in constant time, does not allow:",
+        "choices": ["Random access", "Insertion", "Deletion", "None"],
+        "answer": "Random access",
+        "explanation": "Linked List does not have indexing as its properties",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "45": {
+        "question": "Which data structure permits insertion and removal of nodes at any point in the list in constant time, but do not allow random access",
+        "choices": ["Linked List", "Queue", "Stack", "Priority Queue"],
+        "answer": "Linked List",
+        "explanation": "Linked List does not have indexing as its properties",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "46": {
+        "question": "To traverse a ______, you begin at any node and follow the list in either direction until you return to the original node.",
+        "choices": ["Singly Linked List", "Doubly Linked List", "Two Way Linked List", "Circular Linked List"],
+        "answer": "Circular Linked List",
+        "explanation": "Circular linked list are does not have a null pointer for its next node",
+        "tags": ["LinkedList", "multiplechoice"]
+      },
+      "47": {
+        "question": "A Tree is which type of Data Structure?",
+        "choices": ["Sequential", "Linear", "Non Linear", "Hybrid"],
+        "answer": "Non Linear",
+        "explanation": "A tree is a linear data structure",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "48": {
+        "question": "A collection of one or more trees is called:",
+        "choices": ["Forest", "Graph", "Complete Binary Tree", "Full Binary Tree"],
+        "answer": "Forest",
+        "explanation": "Definition of a forest",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "49": {
+        "question": "A balanced order-n multi way search tree in which each non-root node contains as least (n-1)/2 keys is called:",
+        "choices": ["B Tree", "Complete Binary Tree", "Full Binary Tree", "AVL Tree"],
+        "answer": "B Tree",
+        "explanation": "Definition of B Tree",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "50": {
+        "question": "A node that does not have any child nodes is called:",
+        "choices": ["Child", "Root", "Leaf", "Empty"],
+        "answer": "Leaf",
+        "explanation": "A node that does not contain any child is a leaf.",
+        "tags": ["Tree", "multiplechoice"]
+      },
+      "51": {
+        "question": "The function that transforms a key into a table index is called:",
+        "choices": ["Hash Function", "Key Function", "Table Function", "None"],
+        "answer": "Hash Function",
+        "explanation": "Definition of hash function",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "52": {
+        "question": "One of the techniques of dealing with the hash collision is:",
+        "choices": ["Probing", "Resolving", "Addressing", "Chaining"],
+        "answer": "Chaining",
+        "explanation": "Chaining is one way to deal with hash collisions",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "53": {
+        "question": "Which builds a linked list of all items whose keys hash to the same values?",
+        "choices": ["Probing", "Chaining", "Addressing", "Resolving"],
+        "answer": "Chaining",
+        "explanation": "Chaining is one way to deal with hash collisions",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "54": {
+        "question": "One way to eliminate all clustering is",
+        "choices": ["Quadratic Rehash", "Hasing", "Rehashing", "Double Hashing"],
+        "answer": "Double Hashing",
+        "explanation": "Double hashing minimizes repeated collisions and the effects of clustering",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "55": {
+        "question": "Different keys that hash to the same value follow the same rehash path is called:",
+        "choices": ["Double Hashing", "Quadratic Rehash", "Primary Clustering", "Secondary Clustering"],
+        "answer": "Secondary Clustering",
+        "explanation": "Definition of Secondary Clustering",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "56": {
+        "question": "A good hash function is one that spreads the records uniformly throughout the table and minimizes duplication",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Definition of hash function",
+        "tags": ["Hash Table", "truefalse"]
+      },
+      "57": {
+        "question": "Hash collision can be dealt with techniques such as:",
+        "choices": ["Hashing", "Probing", "Resolving and addressing", "Rehashing and chaining"],
+        "answer": "Rehashing and chaining",
+        "explanation": "Rehashing and chaining are methods to deal with hash collisions",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "58": {
+        "question": "If an attempt is made to insert a record a in the position where b is already placed. The situation that results is called",
+        "choices": ["Hash Collision", "Probing", "Resolving", "None"],
+        "answer": "Hash Collision",
+        "explanation": "Definition of Hash Collision",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "59": {
+        "question": "One way of eliminating primary clustering is to allow the ________ to depend on the number of times that the function is applied to a particular hash value. ",
+        "choices": ["Hash Function", "Key Function", "Rehash Function", "Table Function"],
+        "answer": "Hash Function",
+        "explanation": "Defintion of hash function",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "60": {
+        "question": "The larger the range of the _________ the less likely it is that the two keys yield the same hash value.",
+        "choices": ["Key Function", "Hash Function",],
+        "answer": "Hash Function",
+        "explanation": "Defintion of Hash Function",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "61": {
+        "question": "A node n is said to be _____ to a node m if there is an edge from m to n.",
+        "choices": ["Connected", "Linked", "Adjacent", "Near"],
+        "answer": "Adjacent",
+        "explanation": "Definition of Adjacent",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "62": {
+        "question": "When a node is connected to itself by an edge, this edge is referred to as a:",
+        "choices": ["Connection", "Network", "Cycle", "Relation"],
+        "answer": "Cycle",
+        "explanation": "A node that connects to itself is a cycle",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "63": {
+        "question": "A Cylce is:",
+        "choices": ["An edge which starts and end to itself", "An edge which starts and end into the nearest node", "An edge which starts and end into any other node"],
+        "answer": "An edge which starts and end to itself",
+        "explanation": "Definition of a cycle",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "64": {
+        "question": "A Digraph is a graph which pairs of nodes make up the arcs are ordered pairs",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "Definition of digraph",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "65": {
+        "question": "A dag refers to",
+        "choices": ["Direct Acyclic Graph", "Directed Acyclic Graph", "Denoted Acyclic Graph", " Denoted Cyclic Graph"],
+        "answer": "Directed Acyclic Graph",
+        "explanation": "A dag is a Directed Acyclic Graph",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "66": {
+        "question": "A group of edges and vertices make a:",
+        "choices": ["Tree", "Graph", "Cycle", "Forest"],
+        "answer": "Graph",
+        "explanation": "Definition of Graph",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "67": {
+        "question": "Prim's Minimum Spanning Tree is generally implemented using a:",
+        "choices": ["Stack", "Queue", "Priority Queue", "Union Find"],
+        "answer": "Priority Queue",
+        "explanation": "Prim's algorithm uses a Priority Queue",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "68": {
+        "question": "Kruskal's Minimum Spanning Tree is generally implemented using a:",
+        "choices": ["Stack", "Queue", "Priority Queue", "Union Find"],
+        "answer": "Union Finde",
+        "explanation": "Kruskal's algorithm uses a Union Find",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "69": {
+        "question": "Make is a utility that automatically builds executable programs and libraries from source code by reading files called makefiles which specify how to derive the target program. Which of the following standard graph algorithms is used by Make.",
+        "choices": ["Breadth First Search", "Strongly Connected Component", "Topological Sorting", "Dijkstra's Shortest Path"],
+        "answer": "Topological Sorting",
+        "explanation": "Topological sorting produces the order considering all dependencies provide by makefile.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "70": {
+        "question": " If a Depth First Search of a directed graph contains a back edge, any other DFS of the same graph will also contain at least one back edge.",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "A back edge means a cycle in graph. So if there is a cycle, all DFS traversals would contain at least one back edge.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "71": {
+        "question": "A Depth First Search of a directed graph always produces the same number of tree edges, i.e., independent of the order in which vertices are considered for DFS.",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "Consider the following graph. If we start from 'a', then there is one tree edge. If we start from 'b', then there is no tree edge. a->b",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "72": {
+        "question": "In a depth-first traversal of a graph G with n vertices, k edges are marked as tree edges. The number of connected components in G is",
+        "choices": ["k", "k+1", "n-k-1", "n-k"],
+        "answer": "n-k",
+        "explanation": "Tree edges are the edges that are part of DFS tree.  If there are x tree edges in a tree, then  x+1 vertices in the tree. The output of DFS is a forest if the graph is disconnected.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "73": {
+        "question": "In an unweighted graph where the distance between any two vertices is at most T, any BFS tree has depth at most T, but a DFS tree might have larger depth.",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Since all vertices are connected by a path with at most T edges, and since BFS always finds the path with the fewest edges, the BFS tree will have depth at most T. A DFS tree may have depth up to V −1",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "74": {
+        "question": "To implement Dijkstra’s shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is:",
+        "choices": ["Stack", "Heap", "B-Tree", "Queue",],
+        "answer": "Queue",
+        "explanation": "The shortest path in an un-weighted graph means the smallest number of edges that must be traversed in order to reach the destination in the graph. We can use BFS traversal of the graph to get the shortest paths.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "75": {
+        "question": "Which of the following algorithm can be used to efficiently calculate single source shortest paths in a Directed Acyclic Graph?",
+        "choices": ["Topological Sort", "Strongly Connected Component", "Bellman-Ford", "Dijkstra"],
+        "answer": "Topological Sort",
+        "explanation": "Using Topological Sort to find single source shortest paths in O(V+E) time.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "76": {
+        "question": "Let G(V, E) an undirected graph with positive edge weights. Dijkstra's single-source shortest path algorithm can be implemented using the binary heap data structure with time complexity:",
+        "choices": ["O(|V|^2)", "O(|E|+|V|)", "O( (|E|+|V|)*log|V| )"],
+        "answer": "O( (|E|+|V|)*log|V| )",
+        "explanation": "This is the time complexity of Dijkstra algorithm using an Adjacency list",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "77": {
+        "question": "A minimum spanning tree exists in an undirected graph if and only if which of the following conditions are satisfied by the graph? ",
+        "choices": ["Graph is connected", "Graph is sparse", "Graph is dense", "Graph is weakly connected"],
+        "answer": "Graph is connected",
+        "explanation": "The graph needs to be connected in order for a minimum spanning tree to exists.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "78": {
+        "question": "Primm's algorithm finds the shortest path from 1 vertice to another.",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "Primm's algorithm find the minimum spanning tree",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "79": {
+        "question": "Kruskal's algorithm finds the shortest path from 1 vertice to another.",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "Kruskal's algorithm find the minimum spanning tree",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "80": {
+        "question": "Dijkstra's algorithm finds the shortest path from 1 vertice to another.",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Dijkstra's algorithm finds the shortest path between nodes in a graph.",
+        "tags": ["Graphs", "multiplechoice"]
+      },
+      "81": {
+        "question": "Which of the following is not an in-place algorithm?",
+        "choices": ["Heap Sort", "Merge Sort", "Selection Sort", "Insertion Sort"],
+        "answer": "Merge Sort",
+        "explanation": "Merge sort uses an auxillary space to store elements",
+        "tags": ["sort", "multiplechoice"]
+      },
+      "82": {
+        "question": "A set can have the save elements",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "All elements of in a set is unique",
+        "tags": ["set", "multiplechoice"]
+      },
+      "83": {
+        "question": "A set have no ordering",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Definition of a set",
+        "tags": ["set", "multiplechoice"]
+      },
+      "84": {
+        "question": "Path compression is used to speed up the run time of which operation in the union-find data structure?",
+        "choices": ["Find", "Union", "None"],
+        "answer": "Find",
+        "explanation": "The find operation uses path compression to speed up the run time",
+        "tags": ["set", "multiplechoice"]
+      },
+      "85": {
+        "question": "An application when you want to use a set is when you want all the keys to be unique",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Definition of a set",
+        "tags": ["set", "multiplechoice"]
+      },
+      "86": {
+        "question": "Let x be a problem that belongs to the class NP. If X is NP-Hard, then it is NP-Complete.",
+        "choices": ["True", "False"],
+        "answer": "True",
+        "explanation": "NP-Complete set is intersection of NP and NP-Hard sets",
+        "tags": ["NP", "multiplechoice"]
+      },
+      "87": {
+        "question": "NP is the set of all decision problems for which the instances where the answer is yes have efficiently verifiable proofs of the fact that the answer is indeed yes",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Defintion of NP",
+        "tags": ["NP", "multiplechoice"]
+      },
+      "88": {
+        "question": "The abbreviation NP refers to nondeterministic polynomial time.",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Defintion of NP",
+        "tags": ["NP", "multiplechoice"]
+      },
+      "89": {
+        "question": "Which of the classical problem following is not a backtracking algorithm?",
+        "choices": ["Knight Tour Problem", "N Queen Problem", "Tower of Hanoi Problem", "M coloring Problem"],
+        "answer": "Tower of Hanoi Problem",
+        "explanation": "Tower of hanoi uses simple recursion",
+        "tags": ["theory", "multiplechoice"]
+      },
+      "89": {
+        "question": "Which of the following is the best data structure to use to translate a word from English to Spanish?",
+        "choices": ["Hash Table", "Set", "Array", "Binary Tree"],
+        "answer": "Hash Table",
+        "explanation": "Hash table would work best because of the O(1) lookup time",
+        "tags": ["Hash Table", "multiplechoice"]
+      },
+      "90": {
+        "question": "A parentheses balancing program uses a queue",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "A stack is more appropriate here",
+        "tags": ["Stack", "multiplechoice"]
+      },
+      "91": {
+        "question": "A stack is said to be full when it is _____.",
+        "choices": ["Unsorted", "Underflow", "Sorted", "Overflow"],
+        "answer": "Overflow",
+        "explanation": "When adding more to an already full stack is called overflow.",
+        "tags": ["Stack", "multiplechoice"]
+      },
+      "92": {
+        "question": "In a heap data structure, to find the left child of a given index, i, we use the which of the following index?",
+        "choices": ["2*i - 1", "2*i + 2", "2*i + 1", "2*i"],
+        "answer": "2*i",
+        "explanation": "The left child is always 2*i.",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "93": {
+        "question": "In a heap data structure, to find the right child of a given index, i, we use the which of the following index?",
+        "choices": ["2*i - 1", "2*i + 2", "2*i + 1", "2*i"],
+        "answer": "2*i + 1",
+        "explanation": "The left child is always 2*i.",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "94": {
+        "question": "In a max heap, the root is the maximum element",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "This is a property of a max heap.",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "95": {
+        "question": "In a min heap, the root is the minimum element",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "This is a property of a min heap.",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "96": {
+        "question": "In a heap, the worst case to insert an element is O(n)",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "Since we need at most one swap on each level of a heap on the path from the inserted node to the root, it cost O(logn).",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "97": {
+        "question": "Worst case for heap sort is:",
+        "choices": ["O(nlogn)", "O(n)", "O(logn)", "O(n^2)"],
+        "answer": "O(nlogn)",
+        "explanation": "If we have to swap all elements in the heap (n elements), and moving elements up or down cost O(logn), then total cost is O(nlogn)",
+        "tags": ["heap", "sort", "multiplechoice"]
+      },
+      "98": {
+        "question": "Heapsort can be performed in place",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "The array can be split into two parts, the sorted array and the heap.",
+        "tags": ["heap", "multiplechoice"]
+      },
+      "99": {
+        "question": "A full binary tree is a tree in which every node other than the leaves has at least 1 children. ",
+        "choices": ["True", "False",],
+        "answer": "False",
+        "explanation": "Full binary tree requires that all nodes have 0 or 2 children..",
+        "tags": ["Tree", "multiplechoice"]
       },
   },
   "tagTypes": ["Hash Table", "runtime", "truefalse", "multiplechoice"]
