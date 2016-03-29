@@ -26,7 +26,8 @@ export default class QuestionScreen extends React.Component {
     } else if (this.props.result == "Incorrect") {
       return (
         <View style={styles.container}>
-          <Text style={styles.wrongText}>Incorrect: {this.props.explanation}</Text>
+          <Text style={styles.wrongText}>Incorrect - answer is: {this.props.answer}</Text>
+          <Text style={styles.wrongText}>{this.props.explanation}</Text>
           <TouchableHighlight onPress={() => {this.props.onConfirm()}}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Continue</Text>
@@ -48,16 +49,15 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   rightText: {
-    fontSize: 20,
+    fontSize: 15,
     textAlign: 'center',
     margin: 10,
     fontWeight: '500',
     color: 'green'
   },
   wrongText: {
-    fontSize: 20,
+    fontSize: 15,
     textAlign: 'center',
-    margin: 10,
     fontWeight: '500',
     color: 'red'
   },

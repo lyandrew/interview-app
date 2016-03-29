@@ -81,9 +81,9 @@ class SoftwareInterview extends Component {
     switch (route.name) {
       case 'home':
         var properties = {
-          text: 'Software Engineer Data Structures and Algorithm Practice Questions!',
+          text: 'Software Engineer Interview Practice Questions!',
           direction: 'Select a topic to begin!',
-          choices: ['Graphs', 'Tree', 'Random']
+          choices: ['Graphs', 'Hash Table', 'Tree', 'Random']
         }
         return (
           <ConfigScreen

@@ -163,8 +163,8 @@
       },
       "22": {
         "question": "Arrays are best data structures for",
-        "choices": ["Knowing the relative size of the data", "Unknown size of data"],
-        "answer": "Knowing the relative size of the data",
+        "choices": ["Knowing size of the data", "Unknown size of data"],
+        "answer": "Knowing size of the data",
         "explanation": "Array make use of indexing, resizing an array can take a lot of time.",
         "tags": ["Linked List", "Array", "multiplechoice"]
       },
@@ -190,11 +190,11 @@
         "tags": ["Stack", "Queue", "truefalse"]
       },
       "26": {
-        "question": "Which of the following statements about binary trees is NOT true?",
-        "choices": ["Every binary tree has at least one node", "Every non-empty tree has exactly one root node", "Every node has at most two children", "Every non-root node has exactly one parent"],
-        "answer": "Every binary tree has at least one node",
-        "explanation": "Properties of binary tree. The tree can be an empty tree.",
-        "tags": ["Tree", "multiplechoice"]
+        "question": "Binary tree has at least one node",
+        "choices": ["True", "False"],
+        "answer": "False",
+        "explanation": "Trees can be an empty tree.",
+        "tags": ["Tree", "truefalse"]
       },
       "27": {
         "question": "Which data structure allows deleting data elements from front and inserting at rear?",
@@ -449,9 +449,9 @@
         "tags": ["Graphs", "multiplechoice"]
       },
       "63": {
-        "question": "A Cylce is:",
-        "choices": ["An edge which starts and end to itself", "An edge which starts and end into the nearest node", "An edge which starts and end into any other node"],
-        "answer": "An edge which starts and end to itself",
+        "question": "A Cycle is an edge which:",
+        "choices": ["Starts and end to itself", "Ends into another node"],
+        "answer": "Starts and end to itself",
         "explanation": "Definition of a cycle",
         "tags": ["Graphs", "multiplechoice"]
       },
@@ -690,14 +690,14 @@
         "question": "In a heap, the worst case to insert an element is O(n)",
         "choices": ["True", "False",],
         "answer": "False",
-        "explanation": "Since we need at most one swap on each level of a heap on the path from the inserted node to the root, it cost O(logn).",
+        "explanation": "The most that we need to swap is the height of the tree, thus it cost O(logn).",
         "tags": ["heap", "multiplechoice"]
       },
       "97": {
         "question": "Worst case for heap sort is:",
         "choices": ["O(nlogn)", "O(n)", "O(logn)", "O(n^2)"],
         "answer": "O(nlogn)",
-        "explanation": "If we have to swap all elements in the heap (n elements), and moving elements up or down cost O(logn), then total cost is O(nlogn)",
+        "explanation": "If we have to swap all n elements in the heap, and the cost to swap heapify up or down an element cost O(logn), then total cost is O(nlogn)",
         "tags": ["heap", "sort", "multiplechoice"]
       },
       "98": {
@@ -708,11 +708,18 @@
         "tags": ["heap", "multiplechoice"]
       },
       "99": {
-        "question": "A full binary tree is a tree in which every node other than the leaves has at least 1 children. ",
+        "question": "A full binary tree is a tree in which every node other than the leaves has at least 1 children.",
         "choices": ["True", "False",],
         "answer": "False",
-        "explanation": "Full binary tree requires that all nodes have 0 or 2 children..",
+        "explanation": "Full binary tree requires that all nodes have 0 or 2 children.",
         "tags": ["Tree", "multiplechoice"]
+      },
+      "100": {
+        "question": "Need at least 2 Stack is the mimimun to build a queue.",
+        "choices": ["True", "False",],
+        "answer": "True",
+        "explanation": "Think about how we can build a stack using only 2 queues.",
+        "tags": ["Stack", "multiplechoice"]
       },
   },
   "tagTypes": ["Hash Table", "runtime", "truefalse", "multiplechoice"]

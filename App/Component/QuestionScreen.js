@@ -72,6 +72,7 @@ export default class QuestionScreen extends React.Component {
           <View style={{alignSelf: 'stretch'}}>
             <Answer
               result={this.state.result}
+              answer={this.answer}
               explanation={this.explanation}
               onConfirm={this.props.onConfirm}
 
